@@ -16,8 +16,7 @@
 }
 
 .site-header.is-scrolled {
-  background: rgba(247, 245, 239, 0.88);
-  backdrop-filter: blur(10px);
+  background: var(--color-paper);
   padding-block: var(--space-2xs);
   border-color: var(--color-paper-deep);
 }
