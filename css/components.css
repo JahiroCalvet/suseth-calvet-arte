@@ -35,9 +35,11 @@
 }
 
 .site-header--on-hero:not(.is-scrolled) .brand,
-.site-header--on-hero:not(.is-scrolled) .nav-link,
-.site-header--on-hero:not(.is-scrolled) .menu-toggle span {
+.site-header--on-hero:not(.is-scrolled) .nav-link {
   color: #FBFAF6;
+}
+.site-header--on-hero:not(.is-scrolled) .menu-toggle span {
+  background: #FBFAF6;
 }
 
 .nav-primary {
