@@ -1,0 +1,92 @@
+/* ==========================================================================
+   VARIABLES.CSS
+   Sistema de diseño — Suseth Inge Miranda Calvet, artista plástica
+   Paleta inspirada en el altiplano boliviano: papel de algodón, tierra
+   cocida, ceniza y horizonte. Un único acento, usado con extrema mesura.
+   ========================================================================== */
+
+:root {
+  /* ---- Color: superficie ---- */
+  --color-paper:        #F7F5EF;   /* fondo principal — papel de algodón */
+  --color-paper-alt:     #EFEBE1;  /* fondo secundario, secciones alternas */
+  --color-paper-deep:     #E7E1D3; /* bordes de tarjetas, separadores suaves */
+
+  /* ---- Color: tinta ---- */
+  --color-ink:            #17161A; /* negro cálido, texto principal */
+  --color-ink-soft:       #4A4640; /* texto secundario */
+  --color-stone:          #8B8579; /* texto terciario, metadatos, captions */
+  --color-stone-light:    #B7B1A2; /* líneas, placeholders */
+
+  /* ---- Color: acento único (tierra cocida del altiplano) ---- */
+  --color-accent:         #96442C;
+  --color-accent-soft:    rgba(150, 68, 44, 0.10);
+
+  /* ---- Color: modo oscuro ---- */
+  --color-paper-dark:     #131210;
+  --color-paper-dark-alt: #1B1A17;
+  --color-ink-dark:       #F3F0E8;
+  --color-ink-soft-dark:  #C9C3B4;
+  --color-stone-dark:     #8B8579;
+
+  /* ---- Tipografía ---- */
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-display-alt: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, 'Source Sans 3', sans-serif;
+
+  --tracking-wide: 0.14em;
+  --tracking-wider: 0.24em;
+
+  /* Escala tipográfica fluida */
+  --fs-hero:   clamp(3.2rem, 9vw, 8rem);
+  --fs-xxl:    clamp(2.4rem, 5vw, 4.4rem);
+  --fs-xl:     clamp(1.9rem, 3.2vw, 2.8rem);
+  --fs-lg:     clamp(1.4rem, 2vw, 1.8rem);
+  --fs-md:     1.125rem;
+  --fs-body:   1rem;
+  --fs-sm:     0.875rem;
+  --fs-xs:     0.75rem;
+
+  /* ---- Espaciado ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  1rem;
+  --space-sm:  1.5rem;
+  --space-md:  2.5rem;
+  --space-lg:  4rem;
+  --space-xl:  6rem;
+  --space-2xl: 9rem;
+  --space-3xl: 13rem;
+
+  /* ---- Layout ---- */
+  --max-width: 1440px;
+  --max-width-text: 42rem;
+  --gutter: clamp(1.5rem, 5vw, 5rem);
+
+  /* ---- Movimiento ---- */
+  --ease-museum: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-slow: 900ms;
+  --duration-med: 500ms;
+  --duration-fast: 260ms;
+
+  /* ---- Bordes ---- */
+  --hairline: 1px solid var(--color-paper-deep);
+  --hairline-dark: 1px solid rgba(243, 240, 232, 0.14);
+}
+
+/* Modo oscuro por preferencia del sistema o atributo manual */
+:root[data-theme='dark'] {
+  --color-paper: var(--color-paper-dark);
+  --color-paper-alt: var(--color-paper-dark-alt);
+  --color-paper-deep: rgba(243, 240, 232, 0.14);
+  --color-ink: var(--color-ink-dark);
+  --color-ink-soft: var(--color-ink-soft-dark);
+  --color-stone: var(--color-stone-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-slow: 1ms;
+    --duration-med: 1ms;
+    --duration-fast: 1ms;
+  }
+}

@@ -1,0 +1,24 @@
+/* ==========================================================================
+   RESPONSIVE.CSS — ajustes finos por quiebre, complementa layout.css
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  :root { --space-2xl: 6.5rem; --space-3xl: 9rem; }
+}
+
+@media (max-width: 700px) {
+  :root { --space-2xl: 4.5rem; --space-xl: 3.5rem; }
+  .hero { min-height: 560px; }
+  .hero__scroll { display: none; }
+  .split { gap: var(--space-md); }
+}
+
+@media (max-width: 480px) {
+  .wrap { padding-inline: 1.25rem; }
+}
+
+/* Impresión: útil para CV o catálogos descargados como PDF desde el navegador */
+@media print {
+  .site-header, .site-footer, .hero__scroll, .lightbox, .menu-toggle { display: none !important; }
+  body { background: #fff; color: #000; }
+}

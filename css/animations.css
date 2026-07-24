@@ -1,0 +1,38 @@
+/* ==========================================================================
+   ANIMATIONS.CSS — reveals discretos, sin efectos vistosos
+   ========================================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 900ms var(--ease-museum), transform 900ms var(--ease-museum);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-group] > * { transition-delay: calc(var(--i, 0) * 90ms); }
+
+.fade-in { animation: fadeIn 1.1s var(--ease-museum) both; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.hero__name, .hero__role, .hero__phrase {
+  opacity: 0;
+  animation: heroRise 1.2s var(--ease-museum) forwards;
+}
+.hero__eyebrow { opacity: 0; animation: heroRise 1s var(--ease-museum) forwards; }
+.hero__eyebrow { animation-delay: 0.1s; }
+.hero__name { animation-delay: 0.25s; }
+.hero__role { animation-delay: 0.5s; }
+.hero__phrase { animation-delay: 0.7s; }
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .hero__name, .hero__role, .hero__phrase, .hero__eyebrow { opacity: 1; animation: none; }
+}

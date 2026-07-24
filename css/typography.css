@@ -1,0 +1,86 @@
+/* ==========================================================================
+   TYPOGRAPHY.CSS
+   Serif editorial para voz de autor (títulos, citas) + sans utilitaria
+   para orientación e información funcional.
+   ========================================================================== */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
+
+h1, h2, h3, h4,
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+h1 { font-size: var(--fs-hero); }
+h2 { font-size: var(--fs-xxl); line-height: 1.08; }
+h3 { font-size: var(--fs-xl); line-height: 1.15; }
+h4 { font-size: var(--fs-lg); line-height: 1.25; font-weight: 600; }
+
+p { max-width: var(--max-width-text); }
+p + p { margin-top: 1.1em; }
+
+.lede {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--fs-lg);
+  line-height: 1.4;
+  color: var(--color-ink-soft);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-stone);
+}
+
+.caption {
+  font-size: var(--fs-sm);
+  color: var(--color-stone);
+  line-height: 1.5;
+}
+
+.text-body {
+  font-size: var(--fs-md);
+  color: var(--color-ink-soft);
+  line-height: 1.75;
+  max-width: var(--max-width-text);
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-xl);
+  line-height: 1.3;
+  color: var(--color-ink);
+  max-width: 34rem;
+}
+
+a.link-underline {
+  position: relative;
+  padding-bottom: 0.15em;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size var(--duration-med) var(--ease-museum);
+}
+a.link-underline:hover { background-size: 0% 1px; }
+
+.small-caps {
+  font-variant: small-caps;
+  letter-spacing: var(--tracking-wide);
+}
