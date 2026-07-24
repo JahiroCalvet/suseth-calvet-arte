@@ -22,3 +22,12 @@
   .site-header, .site-footer, .hero__scroll, .lightbox, .menu-toggle { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* Parche de seguridad para móvil: evita que palabras largas se corten mal
+   o que títulos se superpongan al contenido siguiente */
+@media (max-width: 480px) {
+  h1, h2, h3 { overflow-wrap: break-word; word-break: break-word; }
+  .hero__name { font-size: clamp(2.6rem, 13vw, 4rem); line-height: 1; }
+  .hero { padding-bottom: 1rem; }
+  .split { row-gap: var(--space-md); }
+}
