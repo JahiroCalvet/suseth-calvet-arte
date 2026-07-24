@@ -15,13 +15,13 @@
 .hero__media {
   position: absolute; inset: 0;
   background:
-    radial-gradient(120% 90% at 20% 0%, rgba(150,68,44,0.28), transparent 60%),
-    linear-gradient(180deg, #1c1a17 0%, #0f0e0c 100%);
+    radial-gradient(120% 90% at 20% 0%, rgba(150,68,44,0.32), transparent 60%),
+    linear-gradient(180deg, #45403a 0%, #221f1b 100%);
 }
 .hero__media::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(15,14,12,0.05) 0%, rgba(15,14,12,0.75) 100%);
+  background: linear-gradient(180deg, rgba(15,14,12,0.02) 0%, rgba(15,14,12,0.5) 100%);
 }
 .hero__media img {
   width: 100%; height: 100%; object-fit: cover;
